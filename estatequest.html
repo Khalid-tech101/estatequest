@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EstateQuest | Rental Lead Generation for Landlords & Property Managers</title>
+<meta name="description" content="EstateQuest generates qualified rental leads for landlords, property managers and letting agents through targeted online marketing. Find reliable tenants faster.">
+<meta name="keywords" content="rental lead generation, find tenants for landlords, tenant acquisition services, property marketing services, rental property leads">
+<meta property="og:title" content="EstateQuest | Rental Lead Generation for Landlords & Property Managers">
+<meta property="og:description" content="Targeted online marketing that connects property owners with qualified, ready-to-move tenants.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2310233F'/%3E%3Cpath d='M9 22V13.5L16 8l7 5.5V22h-5v-6h-4v6H9z' fill='%23C79A4A'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0F2038;
+    --navy-2:#16294A;
+    --ivory:#F7F5F0;
+    --paper:#EFE9DC;
+    --brass:#B4863A;
+    --brass-dark:#8C6A2F;
+    --slate:#3E4A5C;
+    --slate-soft:#6B7686;
+    --line:#E2DDCF;
+    --green:#2F6F5E;
+    --white:#FFFFFF;
+    --shadow: 0 20px 50px -20px rgba(15,32,56,0.25);
+    --radius: 14px;
+    --maxw: 1200px;
+    --ease: cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color:var(--slate);
+    background:var(--ivory);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--navy);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--brass-dark); font-weight:600;
+  }
+  .eyebrow::before{content:''; width:16px; height:1.5px; background:var(--brass);}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 28px; border-radius:999px; font-weight:600; font-size:15px;
+    cursor:pointer; border:1.5px solid transparent; transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+    font-family:'Inter',sans-serif;
+  }
+  .btn:focus-visible{outline:3px solid var(--brass); outline-offset:3px;}
+  .btn-primary{background:var(--navy); color:var(--white);}
+  .btn-primary:hover{background:var(--navy-2); transform:translateY(-2px); box-shadow:var(--shadow);}
+  .btn-secondary{background:transparent; color:var(--navy); border-color:var(--navy);}
+  .btn-secondary:hover{background:var(--navy); color:var(--white); transform:translateY(-2px);}
+  .btn-brass{background:var(--brass); color:var(--navy);}
+  .btn-brass:hover{background:#c8974a; transform:translateY(-2px); box-shadow:0 20px 40px -18px rgba(180,134,58,0.6);}
+  .btn-ghost-light{background:transparent; color:var(--ivory); border-color:rgba(247,245,240,0.4);}
+  .btn-ghost-light:hover{background:rgba(247,245,240,0.12); border-color:var(--ivory);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(247,245,240,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  header.scrolled{border-color:var(--line); box-shadow:0 8px 30px -20px rgba(15,32,56,0.3);}
+  nav.navbar{
+    max-width:var(--maxw); margin:0 auto; padding:16px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:20px; color:var(--navy);}
+  .brand-mark{width:34px; height:34px; border-radius:9px; background:var(--navy); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .nav-links{display:flex; align-items:center; gap:34px; list-style:none; margin:0; padding:0;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--slate); position:relative; padding:4px 0;}
+  .nav-links a::after{content:''; position:absolute; left:0; bottom:0; width:0; height:1.5px; background:var(--brass); transition:width .25s var(--ease);}
+  .nav-links a:hover{color:var(--navy);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .nav-cta .btn{padding:11px 22px; font-size:14px;}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:200;}
+  .menu-toggle span{display:block; width:24px; height:2px; background:var(--navy); margin:5px 0; transition:transform .25s var(--ease), opacity .25s var(--ease);}
+  .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:76px 0 100px; overflow:hidden;}
+  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;}
+  .hero-copy h1{font-size:clamp(38px, 4.6vw, 60px); line-height:1.05; font-weight:600; margin:20px 0 22px;}
+  .hero-copy h1 em{font-style:normal; color:var(--brass-dark);}
+  .hero-copy p.lede{font-size:18px; color:var(--slate-soft); max-width:480px; margin-bottom:34px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px;}
+  .trust-row{display:flex; gap:36px; flex-wrap:wrap; padding-top:28px; border-top:1px solid var(--line);}
+  .trust-item{}
+  .trust-item .num{font-family:'IBM Plex Mono', monospace; font-size:24px; font-weight:600; color:var(--navy); display:block;}
+  .trust-item .lbl{font-size:12.5px; color:var(--slate-soft); text-transform:uppercase; letter-spacing:.06em; margin-top:2px; display:block;}
+
+  .hero-visual{position:relative;}
+  .hero-photo-frame{
+    position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/4.6;
+    box-shadow:var(--shadow);
+  }
+  .hero-photo-frame img{width:100%; height:100%; object-fit:cover;}
+  .hero-photo-frame::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,32,56,0) 40%, rgba(15,32,56,0.55) 100%);}
+  .dash-card{
+    position:absolute; left:-34px; bottom:-30px; width:250px;
+    background:var(--white); border-radius:16px; padding:20px 20px 18px;
+    box-shadow:0 24px 60px -18px rgba(15,32,56,0.35);
+    z-index:5;
+  }
+  .dash-card .dash-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;}
+  .dash-card .dash-label{font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--slate-soft); font-weight:600;}
+  .live-dot{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--green); font-weight:600;}
+  .live-dot::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--green); animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.35;}}
+  .dash-num{font-family:'IBM Plex Mono', monospace; font-size:34px; font-weight:600; color:var(--navy); line-height:1;}
+  .dash-sub{font-size:12.5px; color:var(--slate-soft); margin-top:6px;}
+  .spark{margin-top:14px;}
+  .spark path{stroke-dasharray:300; stroke-dashoffset:300; animation:draw 1.6s var(--ease) forwards .3s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .mini-badge{
+    position:absolute; top:22px; right:-18px; background:var(--brass); color:var(--navy);
+    font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:12px;
+    padding:10px 16px; border-radius:10px; box-shadow:0 14px 30px -12px rgba(180,134,58,0.55);
+  }
+
+  /* ---------- Section basics ---------- */
+  section{padding:104px 0;}
+  .section-head{max-width:640px; margin-bottom:64px;}
+  .section-head h2{font-size:clamp(28px,3.2vw,42px); font-weight:600; margin-top:16px; line-height:1.12;}
+  .section-head p{color:var(--slate-soft); font-size:17px; margin-top:16px;}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+
+  /* ---------- How it works ---------- */
+  .how{background:var(--paper); position:relative;}
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-radius:20px; overflow:hidden; background:var(--white); box-shadow:var(--shadow);}
+  .step{padding:44px 38px; position:relative; border-right:1px solid var(--line);}
+  .step:last-child{border-right:none;}
+  .step .step-num{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--brass-dark); font-weight:600; letter-spacing:.05em;}
+  .step h3{font-size:22px; margin:18px 0 12px; font-weight:600;}
+  .step p{color:var(--slate-soft); font-size:15.5px;}
+  .step-icon{width:46px; height:46px; border-radius:12px; background:var(--ivory); display:flex; align-items:center; justify-content:center; margin-top:22px;}
+  .step-arrow{position:absolute; right:-14px; top:50%; transform:translateY(-50%); z-index:2; color:var(--brass); display:flex;}
+  .step:last-child .step-arrow{display:none;}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .service-card{
+    background:var(--white); border:1px solid var(--line); border-radius:18px; padding:38px 32px;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .service-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:transparent;}
+  .service-icon{width:52px; height:52px; border-radius:13px; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:24px;}
+  .service-card h3{font-size:21px; margin-bottom:12px; font-weight:600;}
+  .service-card p{color:var(--slate-soft); font-size:15.5px;}
+  .service-card .tag{
+    display:inline-block; margin-top:20px; font-family:'IBM Plex Mono',monospace; font-size:11.5px;
+    color:var(--brass-dark); text-transform:uppercase; letter-spacing:.06em; font-weight:600;
+  }
+
+  /* ---------- Why choose (dark) ---------- */
+  .why{background:var(--navy); color:var(--ivory); position:relative; overflow:hidden;}
+  .why::before{
+    content:''; position:absolute; inset:0; opacity:.08; pointer-events:none;
+    background-image:
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(247,245,240,.6) 79px, rgba(247,245,240,.6) 80px),
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(247,245,240,.6) 79px, rgba(247,245,240,.6) 80px);
+  }
+  .why .wrap{position:relative; display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:center;}
+  .why-photo{border-radius:18px; overflow:hidden; box-shadow:0 30px 70px -25px rgba(0,0,0,0.5); aspect-ratio:4/5;}
+  .why-photo img{width:100%; height:100%; object-fit:cover;}
+  .why .eyebrow{color:var(--brass);}
+  .why .eyebrow::before{background:var(--brass);}
+  .why h2{color:var(--ivory); font-size:clamp(28px,3.2vw,40px); margin:16px 0 30px; font-weight:600; line-height:1.15;}
+  .why-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:22px;}
+  .why-list li{display:flex; gap:16px; align-items:flex-start;}
+  .why-check{
+    width:26px; height:26px; border-radius:50%; background:rgba(180,134,58,0.18); border:1px solid var(--brass);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px;
+  }
+  .why-list h4{color:var(--ivory); font-family:'Inter',sans-serif; font-size:16.5px; font-weight:700; margin-bottom:4px;}
+  .why-list p{color:rgba(247,245,240,0.68); font-size:14.5px;}
+
+  /* ---------- Who we help ---------- */
+  .who-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .who-card{
+    padding:34px 26px; border-radius:16px; background:var(--white); border:1px solid var(--line);
+    text-align:left; transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .who-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .who-icon{width:44px; height:44px; border-radius:11px; background:var(--paper); display:flex; align-items:center; justify-content:center; margin-bottom:20px;}
+  .who-card h3{font-size:18px; margin-bottom:10px; font-weight:600;}
+  .who-card p{font-size:14.5px; color:var(--slate-soft);}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(135deg, var(--navy) 0%, #1B3A63 100%);
+    position:relative; overflow:hidden; padding:96px 0;
+  }
+  .cta-blueprint{position:absolute; inset:0; opacity:.15;}
+  .cta .wrap{position:relative; text-align:center; max-width:680px;}
+  .cta .eyebrow{color:var(--brass);}
+  .cta .eyebrow::before{background:var(--brass);}
+  .cta h2{color:var(--white); font-size:clamp(30px,4vw,46px); margin:18px 0 18px; font-weight:600;}
+  .cta p{color:rgba(247,245,240,0.75); font-size:17px; margin-bottom:38px;}
+  .cta-actions{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--paper);}
+  .contact .wrap{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px;}
+  .contact-info h2{font-size:clamp(28px,3.2vw,38px); margin:16px 0 18px; font-weight:600;}
+  .contact-info > p{color:var(--slate-soft); font-size:16px; margin-bottom:34px; max-width:400px;}
+  .info-row{display:flex; gap:16px; align-items:flex-start; margin-bottom:26px;}
+  .info-icon{width:42px; height:42px; border-radius:11px; background:var(--white); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .info-row h4{font-family:'Inter'; font-size:14.5px; font-weight:700; color:var(--navy); margin-bottom:3px;}
+  .info-row p{font-size:14.5px; color:var(--slate-soft);}
+
+  .form-card{background:var(--white); border-radius:20px; padding:44px; box-shadow:var(--shadow);}
+  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .field{display:flex; flex-direction:column; gap:7px; margin-bottom:20px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:13px; font-weight:600; color:var(--navy);}
+  .field input, .field select, .field textarea{
+    padding:13px 15px; border-radius:10px; border:1.5px solid var(--line); font-family:'Inter',sans-serif;
+    font-size:15px; color:var(--slate); background:var(--ivory); transition:border-color .2s var(--ease), background .2s var(--ease);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--brass); background:var(--white);
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .form-submit{width:100%; margin-top:6px; padding:16px; font-size:16px;}
+  .form-note{font-size:12.5px; color:var(--slate-soft); margin-top:16px; text-align:center;}
+  .success-msg{display:none; text-align:center; padding:50px 20px;}
+  .success-msg.show{display:block;}
+  .success-check{width:64px; height:64px; border-radius:50%; background:rgba(47,111,94,0.12); display:flex; align-items:center; justify-content:center; margin:0 auto 20px;}
+  .success-msg h3{font-size:22px; margin-bottom:10px;}
+  .success-msg p{color:var(--slate-soft); font-size:15px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy); color:rgba(247,245,240,0.72); padding:72px 0 28px;}
+  .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px; padding-bottom:52px; border-bottom:1px solid rgba(247,245,240,0.14);}
+  .footer-brand .brand{color:var(--ivory);}
+  .footer-brand .brand-mark{background:var(--brass);}
+  .footer-brand p{font-size:14.5px; margin:18px 0 22px; max-width:280px; color:rgba(247,245,240,0.6);}
+  .social-row{display:flex; gap:12px;}
+  .social-row a{width:38px; height:38px; border-radius:50%; border:1px solid rgba(247,245,240,0.25); display:flex; align-items:center; justify-content:center; transition:background .25s var(--ease), border-color .25s var(--ease);}
+  .social-row a:hover{background:var(--brass); border-color:var(--brass);}
+  .footer-col h5{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--brass); margin-bottom:20px; font-weight:600;}
+  .footer-col ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px;}
+  .footer-col a{font-size:14.5px; transition:color .2s var(--ease);}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:26px; font-size:13px; color:rgba(247,245,240,0.5); flex-wrap:wrap; gap:12px;}
+  .footer-bottom a{color:rgba(247,245,240,0.5);}
+  .footer-bottom a:hover{color:var(--ivory);}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1024px){
+    .hero .wrap{grid-template-columns:1fr; gap:56px;}
+    .hero-visual{order:-1; max-width:420px; margin:0 auto;}
+    .why .wrap{grid-template-columns:1fr; gap:44px;}
+    .why-photo{max-width:420px; margin:0 auto;}
+    .who-grid{grid-template-columns:repeat(2,1fr);}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .contact .wrap{grid-template-columns:1fr; gap:48px;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 860px){
+    .nav-links, .nav-cta .btn-secondary{display:none;}
+    .menu-toggle{display:block;}
+    .steps{grid-template-columns:1fr;}
+    .step{border-right:none; border-bottom:1px solid var(--line);}
+    .step-arrow{display:none;}
+  }
+  @media (max-width: 640px){
+    .wrap{padding:0 20px;}
+    section{padding:72px 0;}
+    .hero{padding:44px 0 70px;}
+    .services-grid, .who-grid{grid-template-columns:1fr;}
+    .form-grid{grid-template-columns:1fr;}
+    .field{grid-column:1/-1 !important;}
+    .footer-top{grid-template-columns:1fr; gap:34px;}
+    .dash-card{left:0; right:0; margin:0 auto; bottom:-24px; width:88%;}
+    .mini-badge{display:none;}
+    .cta-actions .btn, .hero-actions .btn{width:100%;}
+    .trust-row{gap:24px;}
+  }
+
+  /* Mobile nav panel */
+  .mobile-panel{
+    position:fixed; inset:0 0 0 auto; width:min(84vw,340px); background:var(--ivory);
+    box-shadow:-20px 0 50px rgba(15,32,56,0.2); transform:translateX(100%);
+    transition:transform .35s var(--ease); z-index:150; padding:22px 28px 28px;
+    display:flex; flex-direction:column; height:100%; overflow-y:auto;
+  }
+  .mobile-panel.open{transform:translateX(0);}
+
+  .mobile-panel-top{display:flex; align-items:center; justify-content:space-between; padding-bottom:22px; border-bottom:1px solid var(--line); margin-bottom:8px;}
+  .mobile-panel-top .brand{font-size:18px;}
+  .mobile-close{background:var(--paper); border:none; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;}
+  .mobile-close:hover{background:var(--line);}
+
+  .mobile-links{display:flex; flex-direction:column; padding:10px 0 4px;}
+  .mobile-panel .mobile-links a{
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:18px; font-weight:600; color:var(--navy); padding:16px 2px;
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-panel .mobile-links a:hover{color:var(--brass-dark);}
+
+  .mobile-panel-footer{margin-top:auto; padding-top:28px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:16px;}
+  .mobile-panel-footer .info-row{margin-bottom:0;}
+  .mobile-panel-footer .info-icon{width:36px; height:36px;}
+  .mobile-panel-footer .social-row a{width:34px; height:34px; border-color:var(--line);}
+  .mobile-panel-footer .social-row a:hover{background:var(--brass); border-color:var(--brass);}
+
+  .scrim{position:fixed; inset:0; background:rgba(15,32,56,0.4); opacity:0; pointer-events:none; transition:opacity .3s var(--ease); z-index:140;}
+  .scrim.open{opacity:1; pointer-events:auto;}
+
+  @media (max-width:360px){
+    .mobile-panel{width:100vw;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav class="navbar" aria-label="Primary">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M9 22V13.5L16 8l7 5.5V22h-5v-6h-4v6H9z" fill="#B4863A"/></svg>
+      </span>
+      EstateQuest
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#who-we-help">Who We Help</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-top">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M9 22V13.5L16 8l7 5.5V22h-5v-6h-4v6H9z" fill="#B4863A"/></svg>
+      </span>
+      EstateQuest
+    </a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#0F2038" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <nav class="mobile-links" aria-label="Mobile">
+    <a href="#how-it-works"><span>How It Works</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#services"><span>Services</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#why-us"><span>Why Us</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#who-we-help"><span>Who We Help</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#contact"><span>Contact</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </nav>
+
+  <a href="#contact" class="btn btn-primary" style="margin-top:6px; width:100%;">Book a Consultation</a>
+
+  <div class="mobile-panel-footer">
+    <div class="info-row">
+      <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#0F2038" stroke-width="1.5"/></svg></span>
+      <div><h4>Call us</h4><p>+44 20 7946 0958</p></div>
+    </div>
+    <div class="info-row">
+      <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4z" stroke="#0F2038" stroke-width="1.5"/><path d="M4 6l8 7 8-7" stroke="#0F2038" stroke-width="1.5"/></svg></span>
+      <div><h4>Email us</h4><p>estatequest01@gmail.com</p></div>
+    </div>
+    <div class="social-row" aria-label="Social media" style="margin-top:6px;">
+      <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 9h4v11H4zM6 3a2 2 0 110 4 2 2 0 010-4zM10 9h4v2c1-1.5 2.4-2.3 4-2.3 3 0 4 2 4 5.5V20h-4v-5c0-1.5-.5-2.5-2-2.5-1.2 0-2 1-2 2.5V20h-4z" fill="#0F2038"/></svg></a>
+      <a href="#" aria-label="X / Twitter"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M21 3L3 21" stroke="#0F2038" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#0F2038" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#0F2038" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1" fill="#0F2038"/></svg></a>
+    </div>
+  </div>
+</aside>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy reveal in">
+        <span class="eyebrow">Rental Lead Generation</span>
+        <h1>Find Reliable Tenants <em>Faster</em></h1>
+        <p class="lede">EstateQuest helps landlords and property professionals generate qualified rental leads and connect with suitable tenants — without the wasted viewings.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get More Rental Leads</a>
+          <a href="#contact" class="btn btn-secondary">Book a Free Consultation</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><span class="num">500+</span><span class="lbl">Leads Delivered Monthly</span></div>
+          <div class="trust-item"><span class="num">48hr</span><span class="lbl">Avg. Match Time</span></div>
+          <div class="trust-item"><span class="num">30+</span><span class="lbl">Cities Covered</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-photo-frame">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Modern rental apartment building exterior representing EstateQuest property marketing">
+        </div>
+        <span class="mini-badge">Now accepting new listings</span>
+        <div class="dash-card">
+          <div class="dash-top">
+            <span class="dash-label">Qualified Inquiries</span>
+            <span class="live-dot">LIVE</span>
+          </div>
+          <div class="dash-num" id="statCounter">0</div>
+          <div class="dash-sub">This month, up 24% vs. last</div>
+          <svg class="spark" width="100%" height="34" viewBox="0 0 210 34" fill="none">
+            <path d="M2 26 L34 20 L66 24 L98 12 L130 16 L162 6 L208 4" stroke="#2F6F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Process</span>
+        <h2>A simple, three-step pipeline to filled vacancies</h2>
+        <p>From first impression to signed tenancy, we manage the marketing and matching so you only deal with serious applicants.</p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <span class="step-num">STEP 01</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10" stroke="#0F2038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Property Marketing</h3>
+          <p>We promote rental properties across targeted online channels where active renters actually search.</p>
+          <span class="step-arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="step">
+          <span class="step-num">STEP 02</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#0F2038" stroke-width="1.7"/><path d="M21 21l-4.3-4.3" stroke="#0F2038" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Lead Generation</h3>
+          <p>We attract people actively searching for rental properties and capture their genuine interest.</p>
+          <span class="step-arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#B4863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="step">
+          <span class="step-num">STEP 03</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 12h8M8 16h5M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="#0F2038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Tenant Connection</h3>
+          <p>We connect landlords with qualified rental inquiries, ready to view and ready to move.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2>Everything you need to keep vacancies filled</h2>
+        <p>Three connected services that work together as one tenant-acquisition system.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19v-2a4 4 0 014-4h4a4 4 0 014 4v2M10 11a3 3 0 100-6 3 3 0 000 6zM18 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM20 13.5a3 3 0 012 2.8V19" stroke="#F7F5F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Rental Lead Generation</h3>
+          <p>Receive qualified tenant inquiries from people actively looking for properties like yours — pre-screened for genuine intent.</p>
+          <span class="tag">Core Service</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 11l18-7-7 18-2-8-8-3z" stroke="#F7F5F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Property Marketing</h3>
+          <p>Increase visibility of your rental listings through strategic online promotion across search and social channels.</p>
+          <span class="tag">Visibility</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M10 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#F7F5F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Tenant Acquisition Support</h3>
+          <p>Save time by connecting directly with serious rental prospects, from first inquiry through to move-in.</p>
+          <span class="tag">Efficiency</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="why" id="why-us">
+    <div class="wrap">
+      <div class="why-photo reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Bright modern rental apartment interior representing EstateQuest tenant matching">
+      </div>
+      <div class="why-copy reveal">
+        <span class="eyebrow">Why EstateQuest</span>
+        <h2>Built for landlords who want results, not just listings</h2>
+        <ul class="why-list">
+          <li>
+            <span class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#B4863A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><h4>Qualified rental inquiries</h4><p>Every lead is screened for genuine rental intent, not just browsing.</p></div>
+          </li>
+          <li>
+            <span class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#B4863A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><h4>Data-driven marketing</h4><p>Campaigns are optimised using real performance data, not guesswork.</p></div>
+          </li>
+          <li>
+            <span class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#B4863A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><h4>Saves landlords time</h4><p>Spend less time chasing timewasters and more time meeting serious tenants.</p></div>
+          </li>
+          <li>
+            <span class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#B4863A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><h4>Focused on real results</h4><p>We measure success in filled vacancies, not vanity metrics.</p></div>
+          </li>
+          <li>
+            <span class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#B4863A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><h4>Modern digital approach</h4><p>We reach today's renters where they actually search, not outdated listing boards.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP -->
+  <section id="who-we-help">
+    <div class="wrap">
+      <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <span class="eyebrow">Who We Help</span>
+        <h2>Built for every kind of property professional</h2>
+        <p>Whether you manage one property or hundreds, EstateQuest adapts to your portfolio.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card reveal">
+          <div class="who-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="#0F2038" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Individual Landlords</h3>
+          <p>Fill vacancies quickly without juggling multiple listing sites yourself.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="1.5" stroke="#0F2038" stroke-width="1.6"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" stroke="#0F2038" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Property Managers</h3>
+          <p>Keep your whole portfolio occupied with a steady pipeline of qualified applicants.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M6 21V10l6-5 6 5v11M10 21v-5h4v5" stroke="#0F2038" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Real Estate Agencies</h3>
+          <p>Scale your lettings pipeline with consistent, ready-to-view rental inquiries.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l5-4 5 4v12M13 21V13l4-3 4 3v8" stroke="#0F2038" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Developers</h3>
+          <p>Pre-lease new-build units with targeted campaigns ahead of completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <svg class="cta-blueprint" preserveAspectRatio="none" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#B4863A" stroke-width="1" fill="none">
+        <path d="M0 60 H1200 M0 160 H1200 M0 260 H1200 M0 360 H1200"/>
+        <path d="M120 0 V400 M420 0 V400 M720 0 V400 M1020 0 V400"/>
+      </g>
+    </svg>
+    <div class="wrap reveal">
+      <span class="eyebrow">Get Started</span>
+      <h2>Ready to Find Your Next Tenant?</h2>
+      <p>Tell us about your property and discover how EstateQuest can help you attract qualified renters.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-brass">Start Today</a>
+        <a href="#contact" class="btn btn-ghost-light">Book a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Tell us about your property</h2>
+        <p>Share a few details and one of our rental specialists will reach out within one business day with a tailored plan.</p>
+
+        <div class="info-row">
+          <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#0F2038" stroke-width="1.5"/></svg></span>
+          <div><h4>Phone</h4><p>+44 20 7946 0958</p></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4z" stroke="#0F2038" stroke-width="1.5"/><path d="M4 6l8 7 8-7" stroke="#0F2038" stroke-width="1.5"/></svg></span>
+          <div><h4>Email</h4><p>estatequest01@gmail.com</p></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.6A7 7 0 005 9.4C5 14.9 12 21 12 21z" stroke="#0F2038" stroke-width="1.5"/><circle cx="12" cy="9.4" r="2.4" stroke="#0F2038" stroke-width="1.5"/></svg></span>
+          <div><h4>Office</h4><p>128 Queen's Gate, London, SW7 5JX</p></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="leadForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Whitfield" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+44 7000 000000" required>
+            </div>
+            <div class="field">
+              <label for="location">Property location</label>
+              <input type="text" id="location" name="location" placeholder="City or postcode" required>
+            </div>
+            <div class="field full">
+              <label for="properties">Number of properties</label>
+              <select id="properties" name="properties" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="1">1 property</option>
+                <option value="2-5">2–5 properties</option>
+                <option value="6-10">6–10 properties</option>
+                <option value="10+">10+ properties</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">Tell us about your property (optional)</label>
+              <textarea id="message" name="message" placeholder="Bedrooms, target rent, availability date..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send My Property Details</button>
+          <p class="form-note">By submitting, you agree to be contacted by EstateQuest about your property. No spam, ever.</p>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          <div class="success-check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2F6F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Thanks — we've got your details</h3>
+          <p>A rental specialist will reach out within one business day to discuss your property.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M9 22V13.5L16 8l7 5.5V22h-5v-6h-4v6H9z" fill="#0F2038"/></svg></span>
+          EstateQuest
+        </a>
+        <p>Rental lead generation and property marketing for landlords, property managers, and letting agents.</p>
+        <div class="social-row" aria-label="Social media">
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 9h4v11H4zM6 3a2 2 0 110 4 2 2 0 010-4zM10 9h4v2c1-1.5 2.4-2.3 4-2.3 3 0 4 2 4 5.5V20h-4v-5c0-1.5-.5-2.5-2-2.5-1.2 0-2 1-2 2.5V20h-4z" fill="#F7F5F0"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M21 3L3 21" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#F7F5F0" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#F7F5F0" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1" fill="#F7F5F0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#who-we-help">Who We Help</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Rental Lead Generation</a></li>
+          <li><a href="#services">Property Marketing</a></li>
+          <li><a href="#services">Tenant Acquisition Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:estatequest01@gmail.com">estatequest01@gmail.com</a></li>
+          <li><a href="tel:+442079460958">+44 20 7946 0958</a></li>
+          <li><a href="#contact">Submit your property</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 EstateQuest Ltd. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  const scrim = document.getElementById('scrim');
+  function closeMenu(){
+    menuToggle.classList.remove('open');
+    mobilePanel.classList.remove('open');
+    scrim.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  }
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    scrim.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  scrim.addEventListener('click', closeMenu);
+  document.getElementById('mobileClose').addEventListener('click', closeMenu);
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Hero stat counter
+  const statEl = document.getElementById('statCounter');
+  let counted = false;
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counted){
+        counted = true;
+        const target = 142;
+        const duration = 1400;
+        const start = performance.now();
+        function tick(now){
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          statEl.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+    });
+  }, { threshold: 0.4 });
+  counterIO.observe(statEl);
+
+  // Contact form submit (client-side demo handling)
+  const form = document.getElementById('leadForm');
+  const successMsg = document.getElementById('successMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    form.style.display = 'none';
+    successMsg.classList.add('show');
+  });
+</script>
+
+</body>
+</html>
